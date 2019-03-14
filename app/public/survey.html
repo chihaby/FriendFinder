@@ -26,18 +26,18 @@
             <form>
                 <div class="row">
                     <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="first-name" placeholder="First name">
                     </div>
                     <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
+                    <input type="text" class="last-name" placeholder="Last name">
                     </div>
                 </div>
             </form>
 
             <form>
                 <div class="form-group-1">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q1 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select1">On a scale of 1 to 5 Q1 </label>
+                    <select class="form-control" id="Select1">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -47,8 +47,8 @@
                 </div>
 
                 <div class="form-group-2">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q2 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select2">On a scale of 1 to 5 Q2 </label>
+                    <select class="form-control" id="Select2">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -58,8 +58,8 @@
                 </div>      
                 
                 <!-- <div class="form-group-3">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q3 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select3">On a scale of 1 to 5 Q3 </label>
+                    <select class="form-control" id="Select3">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -69,8 +69,8 @@
                 </div>
 
                 <div class="form-group-4">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q4 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select4">On a scale of 1 to 5 Q4 </label>
+                    <select class="form-control" id="Select4">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -80,8 +80,8 @@
                 </div>
 
                 <div class="form-group-5">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q5 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select5">On a scale of 1 to 5 Q5 </label>
+                    <select class="form-control" id="Select5">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -91,8 +91,8 @@
                 </div>
 
                 <div class="form-group-6">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q6 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select6">On a scale of 1 to 5 Q6 </label>
+                    <select class="form-control" id="Select6">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -102,8 +102,8 @@
                 </div>
 
                 <div class="form-group-7">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q7 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select7">On a scale of 1 to 5 Q7 </label>
+                    <select class="form-control" id="Select7">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -113,8 +113,8 @@
                 </div>
 
                 <div class="form-group-8">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q8 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select8">On a scale of 1 to 5 Q8 </label>
+                    <select class="form-control" id="Select8">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -124,8 +124,8 @@
                 </div>
 
                 <div class="form-group-9">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q9 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select9">On a scale of 1 to 5 Q9 </label>
+                    <select class="form-control" id="Select9">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -135,8 +135,8 @@
                 </div>
 
                 <div class="form-group-10">
-                    <label for="exampleFormControlSelect1">On a scale of 1 to 5 Q10 </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="Select10">On a scale of 1 to 5 Q10 </label>
+                    <select class="form-control" id="Select10">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -149,6 +149,60 @@
             <button type="submit" class="btn btn-primary mb-2">submit</button>
         </div>    
 
-        <script src="" async defer></script>
+        <footer class="footer">
+                <div class="container">
+                    <p>
+                    <a href="/api/friends">API Friends-list Link</a> |
+                </div>
+        </footer>
+
     </body>
 </html>
+
+<script type="text/javascript">
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+$(".submit").on("click", function(event) {
+    event.preventDefault();
+
+    // Here we grab the form elements
+    var newFriend = {
+        firstName: $("#first-name").val().trim(),
+        lastName: $("#last-name").val().trim(),
+        scores: $("#Select1").val(),
+        //qusetion2: $("#Select2").val()
+    };
+
+    console.log(newFriend);
+
+    // This line is the magic. It"s very similar to the standard ajax function we used.
+    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+    // depending on if a tables is available or not.
+
+    $.post("/api/friends", newFriend,
+    function(data) {
+
+        // If a table is available... tell user they are booked.
+        if (data) {
+        alert("Yay! You are officially in the friend zone!");
+        }
+
+        // If a table is available... tell user they on the waiting list.
+        else {
+        alert("error");
+        }
+
+        // Clear the form when submitting
+        $("#first-name").val("");
+        $("#last-name").val("");
+        $("#Select1").val("");
+        $("#Select2").val("");
+
+    });
+});
+
+</script>
