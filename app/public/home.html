@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Page</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+    <body>
+        <div class="wrapper" style="text-align: center;">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Fluid jumbotron</h1>
+                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                </div>
+            </div>
+
+            <form action="/">
+                First name:<br>
+                <input type="text" id="first-name" ><br>
+                Last name:<br>
+                <input type="text" id="last-name" ><br><br>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+
+            <footer class="footer">
+                    <div class="container">
+                        <p>
+                        <a href="/api/friends">API Friends-list Link</a> |
+                        <a href="/">Home</a> 
+                    </div>
+            </footer>
+        </div>  
+    </body>
+</html>
+
+<script type="text/javascript">
+
+    //your code here
+
+$(".submit").on("click", function(event) {
+    event.preventDefault();
+    var newFriend = {
+        firstName: $("#first-name").val().trim(),
+        lastName: $("#last-name").val().trim()
+        //scores: $( "select.Select1 option:checked" ).val(),
+        //qusetion2: $("#Select2").val()
+    };
+
+    $.post("/api/friends", newFriend, function(data) {
+
+        if (data) {
+        alert("Yay! You are officially in the friend zone!");
+        }
+
+        else {
+        alert("error");
+        }
+        
+        // Clear the form when submitting
+        $("#first-name").val("");
+        $("#last-name").val("");
+        //$("#Select1").val("");
+        // $("#Select2").val("");
+    });
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <form>
+                <div class="row">
+                    <div class="col">
+                    <input type="text" class="first-name" placeholder="First name">
+                    </div>
+                    <div class="col">
+                    <input type="text" class="last-name" placeholder="Last name">
+                    </div>
+                </div>
+            </form> -->
+
+            <!-- <form> 
+                <div class="form-group-1">
+                    <label for="Select1">On a scale of 1 to 5 Q1 </label>
+                    <select class="form-control" id="Select1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>-->
+
+            <!--    <div class="form-group-2">
+                    <label for="Select2">On a scale of 1 to 5 Q2 </label>
+                    <select class="form-control" id="Select2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>       -->
+<!--                 
+                <div class="form-group-3">
+                    <label for="Select3">On a scale of 1 to 5 Q3 </label>
+                    <select class="form-control" id="Select3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-4">
+                    <label for="Select4">On a scale of 1 to 5 Q4 </label>
+                    <select class="form-control" id="Select4">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-5">
+                    <label for="Select5">On a scale of 1 to 5 Q5 </label>
+                    <select class="form-control" id="Select5">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-6">
+                    <label for="Select6">On a scale of 1 to 5 Q6 </label>
+                    <select class="form-control" id="Select6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-7">
+                    <label for="Select7">On a scale of 1 to 5 Q7 </label>
+                    <select class="form-control" id="Select7">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-8">
+                    <label for="Select8">On a scale of 1 to 5 Q8 </label>
+                    <select class="form-control" id="Select8">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-9">
+                    <label for="Select9">On a scale of 1 to 5 Q9 </label>
+                    <select class="form-control" id="Select9">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group-10">
+                    <label for="Select10">On a scale of 1 to 5 Q10 </label>
+                    <select class="form-control" id="Select10">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+            </form>  -->
+
+            <!-- <button type="submit" class="submit">submit</button> -->
