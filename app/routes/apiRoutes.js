@@ -7,11 +7,16 @@ module.exports = function(app) {
     });
 
     app.post("/api/friends", function(req, res) {
+        friendsArray.push(req.body);
+        res.json(true);
+        for (var i=0; i<friendsArray.length; i++){
+            let diffArr = [];
+            for (var j=0; j<friendsArray[i].scores.length; j++){
+                diffArr.push(Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(req.body.scores[j])));
+                console.log(diffArr);
+            }
 
-        if (friendsArray) {
-            friendsArray.push(req.body);
-            res.json(true);
-        } 
+        }
     });
 
     // I added this below code to clear out array while working with the functionality.
