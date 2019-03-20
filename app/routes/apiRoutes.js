@@ -10,19 +10,30 @@ module.exports = function(app) {
         friendsArray.push(req.body);
         res.json(true);
         for (var i=0; i<friendsArray.length; i++){
-            let diffArr = [];
-            for (var j=0; j<friendsArray[i].scores.length; j++){
-                diffArr.push(Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(req.body.scores[j])));
-                console.log(diffArr);
-            }
-
+            var last = friendsArray.slice(-1)[0];
+            console.log([last.scores][0]);
         }
+
     });
 
-    // I added this below code to clear out array while working with the functionality.
+    // Added to clear out array while working with the functionality.
 
-    // app.post("/api/clear", function(req, res) {
-    //     friendsArray.length = [];
-    //     res.json({ ok: true });
-    // });
+    app.post("/api/clear", function(req, res) {
+        friendsArray.length = [];
+        res.json({ ok: true });
+    });
 };
+
+// for (var i=0; i<friendsArray.length; i++){
+//     var diffArr;
+//     for (var j=0; j<friendsArray[i].scores.length; j++){
+//         diffArr = (Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(req.body.scores[j])));
+//         console.log(diffArr.join(''));
+//     }
+// }
+
+        // friendsArray.forEach(scoresArr => {
+        //     scoresArr.scores.map(score => {
+        //         console.log(score + req.body.scores);
+        //     })
+        // });
