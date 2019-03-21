@@ -9,12 +9,11 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res) {
         friendsArray.push(req.body);
         res.json(true);
-        var sumArr = [];
+        let sumArr = [];
 
         for (var i=0; i<friendsArray.length; i++){
-            var lastFriend = friendsArray.slice(-1)[0];
-            console.log(lastFriend.scores);
-            var diffArr = [];            
+            let lastFriend = friendsArray.slice(-1)[0];
+            let diffArr = [];            
                 for (var j=0; j<friendsArray[i].scores.length; j++){
                     diffArr.push(Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(lastFriend.scores[j])));                
                 }        
@@ -26,6 +25,7 @@ module.exports = function(app) {
             console.log("sumArr: " + sumArr);
             console.log("max score" + maxScore);
             console.log("index max score " + matchIndex );
+            console.log(friendsArray[matchIndex]);
     });
 
     // Added to clear out array while working with the functionality.
