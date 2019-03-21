@@ -3,7 +3,7 @@ var friendsArray = [{
     firstName: "Ed",
     lastName: "thompson",
     photo: "./images/ed.jpg", 
-    scores: [4,5,3,3,2,4,5,1,2,5]
+    scores: [2,4,1,3,2,4,5,1,2,2]
     },
 
     {
@@ -31,14 +31,14 @@ var friendsArray = [{
     firstName: "Olivia",
     lastName: "Carr",
     photo: "./images/olivia.jpg",
-    scores: [3,3,3,3,5,2,1,3,2,4]
+    scores: [3,3,2,3,2,2,1,3,2,4]
     },
 
     {
     firstName: "Raul",
     lastName: "de blassio",
     photo: "./images/raul.jpg",
-    scores: [4,4,4,1,2,1,5,4,2,3]
+    scores: [2,3,4,1,2,1,5,4,2,3]
     }
 ];
 

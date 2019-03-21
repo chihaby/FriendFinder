@@ -9,28 +9,23 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res) {
         friendsArray.push(req.body);
         res.json(true);
+        var sumArr = [];
 
         for (var i=0; i<friendsArray.length; i++){
             var lastFriend = friendsArray.slice(-1)[0];
             console.log(lastFriend.scores);
-
-            var diffArr = [];
-            var sumArr = [];
+            var diffArr = [];            
                 for (var j=0; j<friendsArray[i].scores.length; j++){
                     diffArr.push(Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(lastFriend.scores[j])));                
                 }        
-                console.log(diffArr);
-                
+                console.log(diffArr);                
                 sumArr.push(diffArr.reduce((total, amount) => total + amount));
-                //console.log(friendSum);
-                //sumArr.push(friendSum);
-                console.log("insideloop: " + sumArr);
-                console.log("Inside Math.max: " + Math.max(sumArr));
             }
-            console.log("outsideloop: " + sumArr);
-            console.log("Outside Math.max: " + Math.max(sumArr));
+            let maxScore = Math.max(...sumArr);
+            let matchIndex = sumArr.indexOf(maxScore);
             console.log("sumArr: " + sumArr);
-        // console.log(lastFriend.scores);
+            console.log("max score" + maxScore);
+            console.log("index max score " + matchIndex );
     });
 
     // Added to clear out array while working with the functionality.
@@ -40,16 +35,3 @@ module.exports = function(app) {
     });
 };
 
-// for (var i=0; i<friendsArray.length; i++){
-//     var diffArr;
-//     for (var j=0; j<friendsArray[i].scores.length; j++){
-//         diffArr = (Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(req.body.scores[j])));
-//         console.log(diffArr.join(''));
-//     }
-// }
-
-        // friendsArray.forEach(scoresArr => {
-        //     scoresArr.scores.map(score => {
-        //         console.log(score + req.body.scores);
-        //     })
-        // });
