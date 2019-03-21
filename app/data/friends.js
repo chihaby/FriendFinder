@@ -31,7 +31,7 @@ var friendsArray = [{
     firstName: "Olivia",
     lastName: "Carr",
     photo: "./images/olivia.jpg",
-    scores: [3,3,2,3,2,2,1,3,2,4]
+    scores: [3,2,2,3,2,2,1,3,2,4]
     },
 
     {

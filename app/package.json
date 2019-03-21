@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/chihaby/FriendFinder#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4"
   }
 }
