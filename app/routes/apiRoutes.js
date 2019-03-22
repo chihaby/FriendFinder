@@ -10,6 +10,10 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res) {
         friendsArray.push(req.body);
         res.json(true);
+    });
+
+    app.get("/api/match", function(req, res) {
+
         let sumArr = [];
         for (var i=0; i<friendsArray.length; i++){
             let lastFriend = friendsArray.slice(-1)[0];
@@ -26,10 +30,7 @@ module.exports = function(app) {
                 console.log("max score" + maxScore);
                 console.log("index max score " + matchIndex );
                 console.log(friendsArray[matchIndex]);
-    });
-
-    app.get("/api/match", function(req, res) {
-        res.json(friendsArray);
+                res.json(friendsArray[matchIndex]);
     });
 
     // Added to clear out array while working with the functionality.

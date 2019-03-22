@@ -10,22 +10,35 @@
 </head>
 
 <body>
-    <div id="matched-friend" style="text-align: center">
+    <div id="match-name" style="text-align: center">
         <H4>Your match</H4>
     </div>
-    <div class="place"></div>
+    <div id="match-photo"></div>
     
 </body>
 
 <script>
 
     function runFriendQuery() {
-        $.ajax({ url: "/api/friends", method: "GET" })
-            .then(function(friendsArray){
-                console.log(friendsArray);
-                $(".place").append(friendsArray);
-            })
+        $.ajax({ url: "/api/match", method: "GET" })
+            .then(function(data){
+                console.log(data);
+
+        $("#match-name").append(
+        $("<h2>").text("First Name: " + data.firstName),
+        $("<h2>").text("Last Name: " + data.lastName),
+        $(<img src= "data.photo" > ));
+
+        $('#match-photo').append( data.photo);
+
+        })
+
     }
     runFriendQuery();
 </script>
 </html>
+
+<!-- 
+$("#match-name").append(
+    $("<h2>").text("First Name: " + data.firstName),
+    $("<h2>").text("Last Name: " + data.lastName)); -->
