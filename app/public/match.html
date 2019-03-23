@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Reservation Page</title>    
+    <title>Reservation Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -13,32 +13,30 @@
     <div id="match-name" style="text-align: center">
         <H4>Your match</H4>
     </div>
-    <div id="match-photo"></div>
-    
+    <div id="match-photo" style="text-align: center"></div>
+
 </body>
 
 <script>
-
     function runFriendQuery() {
         $.ajax({ url: "/api/match", method: "GET" })
-            .then(function(data){
+            .then(function (data) {
                 console.log(data);
 
-        $("#match-name").append(
-        $("<h2>").text("First Name: " + data.firstName),
-        $("<h2>").text("Last Name: " + data.lastName),
-        $(<img src= "data.photo" > ));
-
-        $('#match-photo').append( data.photo);
-
-        })
+                $("#match-name").append(
+                    $("<h2>").text("First Name: " + data.firstName),
+                    $("<h2>").text("Last Name: " + data.lastName));
+                //$("#match-photo").append(data.photo);
+                $('<img />', {
+                    src: data.photo,
+                    width: '200px',
+                    height: '100px'
+                }).appendTo($('#match-photo').empty())
+                console.log("photo", data.photo)
+            })
 
     }
     runFriendQuery();
 </script>
-</html>
 
-<!-- 
-$("#match-name").append(
-    $("<h2>").text("First Name: " + data.firstName),
-    $("<h2>").text("Last Name: " + data.lastName)); -->
+</html>
