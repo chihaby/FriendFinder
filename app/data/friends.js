@@ -23,7 +23,6 @@ var friendsArray = [{
 {
     firstName: "Patricia",
     lastName: "cass",
-    //photo: "https://vetstreet.brightspotcdn.com/dims4/default/cc1c07c/2147483647/crop/0x0%2B0%2B0/resize/180x180/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F45%2Fa06040b3ac11e092fe0050568d634f%2Ffile%2Fhub-dogs-adult.jpg",
     photo: "/images/patricia.jpg",
     scores: [2, 2, 2, 5, 5, 4, 4, 1, 3, 2]
 },

@@ -10,185 +10,189 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
-    <body>
-        <div class="wrapper" style="text-align: center; ">
-            <div class="jumbotron jumbotron-fluid" style=" background-color: rgb(50, 50, 201)">
-                <div class="container" style= "color: white;">
-                    <h1 class="display-4">Freind Finder</h1>
-                    <p class="lead">An app that lets you find friends with interests in common.</p>
-                </div>
+<body>
+    <div class="wrapper" style="text-align: center; ">
+        <div class="jumbotron jumbotron-fluid" style=" background-color: rgb(50, 50, 201)">
+            <div class="container" style="color: white;">
+                <h1 class="display-4">Friend Finder</h1>
+                <p class="lead">An app that lets you find friends with interests in common.</p>
+            </div>
+        </div>
+
+        <form action="/">
+            <div>
+                First name:<br>
+                <input type="text" id="first-name"><br>
+                Last name:<br>
+                <input type="text" id="last-name"><br><br>
             </div>
 
-            <form action="/">
-                <div>
-                    First name:<br>
-                    <input type="text" id="first-name" ><br>
-                    Last name:<br>
-                    <input type="text" id="last-name" ><br><br>
-                </div>
+            <p>
+                <h5>Answer the following questions with a scale of 1 to 5. 1 being of no interest and 5 of high interest
+                </h5>
+            </p>
 
-                <p><h5>Answer the following questions with a scale of 1 to 5. 1 being of no interest and 5 of high interest</h5></p>
+            <div class="form-group">
+                <label for="Select1">Biking </label>
+                <select class="form-control" id="Select1" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select1">Biking </label>
-                    <select class="form-control" id="Select1" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select2">Swimming </label>
+                <select class="form-control" id="Select2" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select2">Swimming </label>
-                    <select class="form-control" id="Select2" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select3">Hiking </label>
+                <select class="form-control" id="Select3" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select3">Hiking </label>
-                    <select class="form-control" id="Select3" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select4">Reading </label>
+                <select class="form-control" id="Select4" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select4">Reading </label>
-                    <select class="form-control" id="Select4" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select5">Travel</label>
+                <select class="form-control" id="Select5" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select5">Travel</label>
-                    <select class="form-control" id="Select5" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select6">Cooking</label>
+                <select class="form-control" id="Select6" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select6">Cooking</label>
-                    <select class="form-control" id="Select6" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select7"> Jogging </label>
+                <select class="form-control" id="Select7" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select7"> Jogging </label>
-                    <select class="form-control" id="Select7" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select8">Meeting new people </label>
+                <select class="form-control" id="Select8" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select8">Meeting new people </label>
-                    <select class="form-control" id="Select8" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select9">Rain</label>
+                <select class="form-control" id="Select9" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select9">Rain</label>
-                    <select class="form-control" id="Select9" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="Select10">Cars </label>
+                <select class="form-control" id="Select10" style="background-color: gray; color:white">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="Select10">Cars </label>
-                    <select class="form-control" id="Select10" style="background-color: gray; color:white">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
+            <button type="submit" class="submit">Submit</button>
+        </form>
 
-                <button type="submit" class="submit">Submit</button>
-            </form>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/friends">API Friends-list Link</a> |
+                    <a href="/">Home</a>
+            </div>
+        </footer>
+    </div>
+</body>
 
-            <footer class="footer">
-                    <div class="container">
-                        <p>
-                        <a href="/api/friends">API Friends-list Link</a> |
-                        <a href="/">Home</a> 
-                    </div>
-            </footer>
-        </div>  
-    </body>
 </html>
 
 <script type="text/javascript">
 
-$(".submit").on("click", function(event) {
-    event.preventDefault();
-    var newFriend = {
-        firstName: $("#first-name").val().trim(),
-        lastName: $("#last-name").val().trim(),
-        scores: [
-                $( "#Select1" ).val(), $( "#Select2" ).val(), 
-                $( "#Select3" ).val(), $( "#Select4" ).val(), 
-                $( "#Select5" ).val(), $( "#Select6" ).val(), 
-                $( "#Select7" ).val(), $( "#Select8" ).val(), 
-                $( "#Select9" ).val(), $( "#Select10" ).val()
-                ]
-    };
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+        var newFriend = {
+            firstName: $("#first-name").val().trim(),
+            lastName: $("#last-name").val().trim(),
+            scores: [
+                $("#Select1").val(), $("#Select2").val(),
+                $("#Select3").val(), $("#Select4").val(),
+                $("#Select5").val(), $("#Select6").val(),
+                $("#Select7").val(), $("#Select8").val(),
+                $("#Select9").val(), $("#Select10").val()
+            ]
+        };
 
-    $.post("/api/friends", newFriend, function(data) {
-        if (data) {
-        alert("Yay! You are officially in the friend zone!");
-        }
-        else {
-        alert("error");
-        }        
-        // Clear the form when submitting
-        $("#first-name").val("");
-        $("#last-name").val("");
-        $("#Select1").val("");
-        $("#Select2").val("");
-        $("#Select3").val("");
-        $("#Select4").val("");
-        $("#Select5").val("");
-        $("#Select6").val("");
-        $("#Select7").val("");
-        $("#Select8").val("");
-        $("#Select9").val("");
-        $("#Select10").val("");
+        $.post("/api/friends", newFriend, function (data) {
+            if (data) {
+                alert("Yay! You are officially in the friend zone!");
+            }
+            else {
+                alert("error");
+            }
+            // Clear the form when submitting
+            $("#first-name").val("");
+            $("#last-name").val("");
+            $("#Select1").val("");
+            $("#Select2").val("");
+            $("#Select3").val("");
+            $("#Select4").val("");
+            $("#Select5").val("");
+            $("#Select6").val("");
+            $("#Select7").val("");
+            $("#Select8").val("");
+            $("#Select9").val("");
+            $("#Select10").val("");
+        });
     });
-});
 </script>
