@@ -1,0 +1,14 @@
+#match-name {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: aqua;
+    color: black
+}
+
+img {
+    width: '200px';
+    height: '100px'
+}
+
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -24,9 +25,7 @@
                 console.log(data);
 
                 $("#match-name").append(
-                    $("<h2>").text("First Name: " + data.firstName),
-                    $("<h2>").text("Last Name: " + data.lastName));
-                //$("#match-photo").append(data.photo);
+                    $("<h2>").text(data.firstName + " " + data.lastName));
                 $('<img />', {
                     src: data.photo,
                     width: '200px',
@@ -34,7 +33,6 @@
                 }).appendTo($('#match-photo').empty())
                 console.log("photo", data.photo)
             })
-
     }
     runFriendQuery();
 </script>
